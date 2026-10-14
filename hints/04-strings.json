@@ -1,0 +1,92 @@
+{
+  "ex01": [
+    "Count every character, including spaces.",
+    "Positions start at 0, so the last position is one less than the length.",
+    "Some answers are strings and need quotes; lengths are numbers and don't."
+  ],
+  "ex02": [
+    "The first character is at position 0.",
+    "There are two ways to reach the last character: using the length, or using .at() with a negative number.",
+    "Join the two characters with +."
+  ],
+  "ex03": [
+    "Call the method on the parameter, then add the exclamation mark.",
+    "The method returns a new string. Return that new string plus '!'."
+  ],
+  "ex04": [
+    "You need two methods: one removes the spaces, the other changes the case.",
+    "Methods can be chained: the second one runs on the result of the first."
+  ],
+  "ex05": [
+    "Before comparing, make both words use the same case.",
+    "Convert both words with the same method, then compare them with ===."
+  ],
+  "ex06": [
+    "The message can come in any case, but the text you search for is lowercase.",
+    "Convert the message to lowercase first, then check whether it includes the words."
+  ],
+  "ex07": [
+    "Check the rules in the order given: the hidden rule must come first.",
+    "Each rule is one `if` with a `return`. The last line handles everything else.",
+    "Include the dot in what you check for at the end, otherwise a file named 'js' would match."
+  ],
+  "ex08": [
+    "First find where the @ is and store that position in a variable.",
+    "A missing @ gives -1, the first character is position 0, and the last character is position length - 1.",
+    "The position must be greater than 0 and less than the last position."
+  ],
+  "ex09": [
+    "First find the position of the @.",
+    "The domain starts one position after the @ and goes until the end of the string."
+  ],
+  "ex10": [
+    "Read the error: strings are read-only. You can't change a character in place.",
+    "Build a new string: the uppercase first letter, plus the rest of the word.",
+    "The rest of the word starts at position 1. Which method cuts a string from a position to the end?"
+  ],
+  "ex11": [
+    "Two steps: change the case, then replace the spaces.",
+    "Chain the two methods together."
+  ],
+  "ex12": [
+    "How many characters must be hidden? Think about the length of the number.",
+    "The visible part is the last 4 characters. A negative position counts from the end.",
+    "Build the hidden part by repeating '*' and add the visible part at the end."
+  ],
+  "ex13": [
+    "padStart is a string method, so convert each number to a string first.",
+    "Pad each part to 2 characters with '0', then join them with ':'."
+  ],
+  "ex14": [
+    "Start a counter at 0 before the loop.",
+    "Inside the loop, compare each character with the one you are looking for."
+  ],
+  "ex15": [
+    "To count both cases, make the whole text lowercase before the loop.",
+    "To check whether a character is a vowel, you can ask whether the string 'aeiou' includes it."
+  ],
+  "ex16": [
+    "Where does the strange part of the result come from? What is text[text.length]?",
+    "The last character is at position length - 1, not length."
+  ],
+  "ex17": [
+    "Methods never change the original string, unless you store the result.",
+    "indexOf returns the position of the first match. Positions start at 0.",
+    "replace only changes the first match. slice stops before the end position."
+  ],
+  "ex18": [
+    "The first initial is always the first character of the name.",
+    "Every other initial comes right after a space. While looping, look at the character before the current one.",
+    "Convert each initial to uppercase and add a dot after it."
+  ],
+  "ex19": [
+    "Prepare the text first: same case, no spaces.",
+    "Build the reversed version with a loop, then compare it with the prepared text.",
+    "Another way: compare the first character with the last, the second with the second to last, and so on."
+  ],
+  "ex20": [
+    "Walk through the text keeping a counter for the current group of repeated characters.",
+    "A group ends when the next character is different from the current one. That's when you add the character and its count to the result.",
+    "Once a group is added, reset the counter for the next group."
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "ex01": [
+    "A function declaration starts with the keyword `function`, then the name, then parentheses and curly braces.",
+    "Remember to put `export` before the declaration so the tests can see it.",
+    "Inside the curly braces, use `return` to give back the text."
+  ],
+  "ex02": [
+    "The parameter goes between the parentheses, right after the function name.",
+    "Inside the function, use the parameter like any other variable and return the result."
+  ],
+  "ex03": [
+    "List both parameters between the parentheses, separated by a comma.",
+    "The area of a rectangle is its width times its height."
+  ],
+  "ex04": [
+    "console.log shows a value but doesn't give it back to whoever called the function.",
+    "Which keyword sends a value back out of a function?"
+  ],
+  "ex05": [
+    "A default value is written right after the parameter name, with an equals sign.",
+    "The default value is a string, so it needs quotes.",
+    "A template literal makes it easy to build the greeting."
+  ],
+  "ex06": [
+    "A function expression is a function without a name, written on the right side of an assignment.",
+    "Declare the constant first, then assign the keyword `function`, the parameter and the body to it.",
+    "Remember the `export` before `const`."
+  ],
+  "ex07": [
+    "An arrow function has the parameters, then =>, then the value to return.",
+    "Without curly braces, whatever comes after => is returned automatically.",
+    "An even number has no remainder when divided by 2. A comparison already produces true or false."
+  ],
+  "ex08": [
+    "Follow the code line by line for each argument. Which `return` is reached?",
+    "When a function ends without reaching any `return`, it gives back a special empty value.",
+    "console.log only prints. It doesn't return anything."
+  ],
+  "ex09": [
+    "Start the function with an `if` that checks the special case.",
+    "Inside that `if`, return right away. The code after it only runs when the special case didn't happen.",
+    "`null` is a keyword, not a string."
+  ],
+  "ex10": [
+    "Write `square` first. It's a one-line function.",
+    "Inside `sumOfSquares`, call `square` once for each parameter and add the results."
+  ],
+  "ex11": [
+    "`addTen` declares its own `count`. Does changing it affect the `count` outside?",
+    "`addOne` doesn't declare anything: the `count` it changes is the one outside.",
+    "`addOne` is called twice. Follow the outer `count` after each call."
+  ],
+  "ex12": [
+    "Everything the function needs should come in through its parameters.",
+    "The function shouldn't assign anything to a variable declared outside it. Just return the result.",
+    "Once the function uses its parameters, the outer variables aren't needed: delete those lines."
+  ],
+  "ex13": [
+    "What's the difference between `getGreeting` and `getGreeting()`?",
+    "Without parentheses you get the function itself, not the value it returns."
+  ],
+  "ex14": [
+    "`fn` is a function, so you can call it like any other: fn(something).",
+    "Call `fn` once with `value`, then call it again with the result of the first call."
+  ],
+  "ex15": [
+    "makeCounter needs a variable to remember the count, and it must return a function.",
+    "Declare the count inside makeCounter, outside the returned function. That's what makes each counter independent.",
+    "Every time the returned function runs, it increases the count and returns it."
+  ],
+  "ex16": [
+    "makeMultiplier doesn't multiply anything itself: it returns a function that will.",
+    "The returned function receives one number and can still use `factor`, thanks to the closure."
+  ],
+  "ex17": [
+    "The rest parameter is written as three dots followed by a name. Inside the function, it's an array.",
+    "Start a total at 0 and loop over the array, adding each number.",
+    "With no arguments the array is empty, so the loop never runs and the total stays 0."
+  ],
+  "ex18": [
+    "Every recursive function needs a stopping point. When is the answer obvious without calculating?",
+    "The factorial of n is n times the factorial of n - 1.",
+    "Return 1 for the simplest case, and for everything else return n multiplied by a call to factorial with a smaller number."
+  ],
+  "ex19": [
+    "What should countdown(0) return? That's where the recursion stops.",
+    "countdown(3) is '3 ' followed by whatever countdown(2) returns.",
+    "Use a template literal or + to join the current number, a space, and the result of the recursive call."
+  ],
+  "ex20": [
+    "pipeline doesn't run anything immediately: it returns a function that takes a value.",
+    "Inside the returned function, keep a variable with the current result, starting with the value received.",
+    "Loop over `fns` and replace the current result with what each function returns. With no functions, the loop doesn't run."
+  ]
+}

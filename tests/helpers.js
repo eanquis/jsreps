@@ -56,8 +56,41 @@ export function assertCalls(fn, cases) {
   assert.equal(typeof fn, 'function', 'This should be a function. Did you rename or delete it?');
   for (const [args, expected] of cases) {
     const call = `${fn.name}(${args.map((arg) => inspect(arg)).join(', ')})`;
-    assert.equal(fn(...args), expected, `${call} should return ${inspect(expected)}.`);
+    assert.deepEqual(fn(...args), expected, `${call} should return ${inspect(expected)}.`);
   }
+}
+
+/**
+ * Calls a function and checks that it throws an Error with the given name
+ * and message.
+ *
+ *   assertThrows(divide, [1, 0], { name: 'RangeError', message: 'Cannot divide by zero' });
+ */
+export function assertThrows(fn, args, expected) {
+  assert.equal(typeof fn, 'function', 'This should be a function. Did you rename or delete it?');
+  const call = `${fn.name}(${args.map((arg) => inspect(arg)).join(', ')})`;
+  assert.throws(
+    () => fn(...args),
+    (error) => {
+      assert.ok(
+        error instanceof Error,
+        `${call} should throw an Error object, but it threw ${inspect(error)}.`,
+      );
+      assert.equal(
+        error.name,
+        expected.name,
+        `${call} should throw a ${expected.name}, but it threw a ${error.name}.`,
+      );
+      assert.equal(
+        error.message,
+        expected.message,
+        `${call} should throw the message ${inspect(expected.message)}, ` +
+          `but the message was ${inspect(error.message)}.`,
+      );
+      return true;
+    },
+    `${call} should throw a ${expected.name}, but it didn't throw anything.`,
+  );
 }
 
 async function importExercise(file) {

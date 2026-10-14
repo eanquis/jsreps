@@ -1,0 +1,102 @@
+{
+  "ex01": [
+    "Start with an empty array and loop from 1 up to and including n.",
+    "Reuse your FizzBuzz logic from module 02 for each number, and push the result into the array.",
+    "Check divisibility by both 3 and 5 first, and remember to push numbers as strings."
+  ],
+  "ex02": [
+    "Split the sentence into words, transform each word, then join them back with spaces.",
+    "Each word is its first character in uppercase followed by the rest of the word in lowercase.",
+    "charAt(0) on an empty string returns an empty string instead of undefined, which keeps the empty case working."
+  ],
+  "ex03": [
+    "First build a clean version of the text: lowercase, with only letters and digits.",
+    "Once the text is clean, compare it with its reversed version.",
+    "To reverse a string, you can split it into characters, reverse the array and join it again."
+  ],
+  "ex04": [
+    "Two words are anagrams if, after sorting their letters, they become exactly the same string.",
+    "Lowercase both words and remove the spaces before comparing.",
+    "Another way: count how many times each letter appears in each word and compare the counts."
+  ],
+  "ex05": [
+    "Lowercase the text and remove the punctuation marks before splitting it into words.",
+    "Splitting on a space leaves empty strings where there were several spaces in a row. Skip them.",
+    "For each word, add 1 to its count in the object, starting from 0 when the word is new."
+  ],
+  "ex06": [
+    "Handle the empty list first, before any calculation.",
+    "Math.min and Math.max accept several numbers: spread the array into them.",
+    "The trend only depends on the first and the last reading."
+  ],
+  "ex07": [
+    "Check each rule separately, in the order listed, and add the rule's name to the result when it fails.",
+    "A regular expression like /[A-Z]/ tests whether a string contains at least one character in that range.",
+    "Each rule is an independent `if`, not an `else if`: one password can break several rules."
+  ],
+  "ex08": [
+    "Handle one character at a time: is it a lowercase letter, an uppercase letter, or something else?",
+    "Turn the letter into its position in the alphabet (0 to 25) by subtracting the code of 'a' or 'A', shift it, then convert back.",
+    "To wrap around, use the remainder by 26. For negative shifts, add 26 and take the remainder again so the position is never negative."
+  ],
+  "ex09": [
+    "To encode, walk through the text keeping a count of how many times the current character has repeated.",
+    "When the next character is different (or the text ends), write the count and the character, then reset the count.",
+    "To decode, collect digits into a string until you find a letter, then repeat that letter Number(digits) times."
+  ],
+  "ex10": [
+    "For toRoman, list every symbol with its value, including the subtractive pairs like CM and IV, from largest to smallest.",
+    "While the number is at least the current value, add the symbol and subtract the value.",
+    "For fromRoman, a symbol is subtracted when the next symbol has a bigger value. Otherwise it is added."
+  ],
+  "ex11": [
+    "There are only 8 ways to win: 3 rows, 3 columns and 2 diagonals. You can list them all.",
+    "A line is a win when its three cells are equal and not empty.",
+    "If no line wins, the game is a draw when no cell is empty, and still going otherwise."
+  ],
+  "ex12": [
+    "In the transposed matrix, the value at row r, column c comes from row c, column r of the original.",
+    "The new matrix has as many rows as the original has columns.",
+    "Rotating clockwise is the same as transposing and then reversing each row."
+  ],
+  "ex13": [
+    "Walk through the array. Values that aren't arrays go straight into the result.",
+    "When a value is an array, flatten it first by calling your own function, then add all of its values to the result.",
+    "The recursion stops by itself: an array with no arrays inside never calls the function again."
+  ],
+  "ex14": [
+    "Anagrams have the same letters, so sorting the letters gives them all the same key.",
+    "Use an object to collect the words of each group under their key.",
+    "Object keys that are strings keep the order in which they were first added, so the groups come out in the right order."
+  ],
+  "ex15": [
+    "Sort a copy of the array, not the original one.",
+    "The comparison function sorts by score first. Only when the scores are equal does it compare the names.",
+    "After sorting, map each player to a string. The position is the index plus one."
+  ],
+  "ex16": [
+    "Write and test the functions in order: each one can use the ones before it.",
+    "report only needs to call average and letterGrade for each student.",
+    "For bestStudent, keep the best entry so far and replace it only when you find a strictly higher average."
+  ],
+  "ex17": [
+    "Three steps: keep only the items below their minimum, sort them by name, turn each one into a string.",
+    "The amount to order is twice the minimum minus what's already in stock.",
+    "localeCompare is a convenient way to compare strings in a sort."
+  ],
+  "ex18": [
+    "Because multiplication comes first, the expression is a sum of products: split it on ' + ' first.",
+    "Each piece of the sum is a product: split it on ' * ' and multiply the numbers.",
+    "Validate every number before using it: it must be made only of digits. Empty pieces and other symbols are invalid."
+  ],
+  "ex19": [
+    "Declare the balance and the history as variables inside createAccount, before the returned object.",
+    "Check every rule before changing anything, so a failed operation leaves the account untouched.",
+    "history() should return a new array with new objects, so changes from outside don't reach the account."
+  ],
+  "ex20": [
+    "Keep the items in an object, keyed by name, with the price and the quantity of each one.",
+    "Store the discount as a rate (like 0.1) and apply it only when calculating the total.",
+    "Validate the discount code before changing the current discount, so an invalid code doesn't affect the cart."
+  ]
+}

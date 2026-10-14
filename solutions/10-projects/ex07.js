@@ -1,0 +1,29 @@
+/**
+ * Exercise 07 · Password checker
+ *
+ * Instead of saying only "weak password", good sign-up forms tell you what
+ * is missing.
+ *
+ * Task:
+ *   Return an array with the name of every rule the password breaks,
+ *   in this order:
+ *   - "length": it has fewer than 8 characters
+ *   - "uppercase": it has no uppercase letter (A-Z)
+ *   - "lowercase": it has no lowercase letter (a-z)
+ *   - "digit": it has no digit (0-9)
+ *   A strong password returns an empty array.
+ *   passwordProblems('hello') → ['length', 'uppercase', 'digit']
+ */
+
+function hasCharBetween(text, first, last) {
+  return text.split('').some((char) => char >= first && char <= last);
+}
+
+export function passwordProblems(password) {
+  const problems = [];
+  if (password.length < 8) problems.push('length');
+  if (!hasCharBetween(password, 'A', 'Z')) problems.push('uppercase');
+  if (!hasCharBetween(password, 'a', 'z')) problems.push('lowercase');
+  if (!hasCharBetween(password, '0', '9')) problems.push('digit');
+  return problems;
+}

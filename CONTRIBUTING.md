@@ -26,7 +26,8 @@ There are no dependencies. Everything runs on Node.js 24.
   `Exercise NN · Title`, a short explanation and the task.
 - Exercises must **fail** before the student edits them.
 - From module 02 on, exercises are functions, and tests check them with
-  `assertCalls()` from `tests/helpers.js`. Cover every branch: the solutions
+  `assertCalls()` (return values) and `assertThrows()` (errors) from
+  `tests/helpers.js`. Cover every branch: the solutions
   must reach 100% coverage.
 - Tests use fixed values. When a test needs to check *how* something was done
   (e.g. "use `let`"), it reads the code with `code()` from `tests/helpers.js`.

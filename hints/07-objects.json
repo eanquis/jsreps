@@ -1,0 +1,89 @@
+{
+  "ex01": [
+    "An object starts with { and ends with }. Inside, write key: value pairs separated by commas.",
+    "The title and the author are strings, so they need quotes. The number of pages doesn't."
+  ],
+  "ex02": [
+    "Each part of the description is a property of `book`, read with a dot.",
+    "A template literal makes it easy to mix the properties with the fixed text."
+  ],
+  "ex03": [
+    "The name of the property you need is inside the variable `field`.",
+    "Dot notation looks for a property literally called \"field\". Brackets use the value of the variable instead."
+  ],
+  "ex04": [
+    "Adding and changing a property look the same: assign a value with =.",
+    "To remove a property, write the `delete` keyword followed by the property."
+  ],
+  "ex05": [
+    "Checking the value isn't enough: false, 0 and undefined are all falsy, but the key exists.",
+    "There is an operator that checks whether a key exists in an object. Its name is a short English word.",
+    "Object.hasOwn also works. It receives the object and the key."
+  ],
+  "ex06": [
+    "Two objects created separately are different objects, even if they look the same.",
+    "`c` doesn't copy `a`: both variables point to the same object.",
+    "Changing the object through `c` changes what `a` sees too. `b` is a separate object."
+  ],
+  "ex07": [
+    "Object.keys gives you an array with the keys.",
+    "Arrays have a method that joins all the elements into one string, with a separator of your choice."
+  ],
+  "ex08": [
+    "Start a total at 0, then add to it inside the loop.",
+    "for...in gives you each key. Use brackets to read the value of that key."
+  ],
+  "ex09": [
+    "Start with an empty array and push one string per property.",
+    "Each entry is a pair [key, value]. Destructuring can split it into two variables right in the loop."
+  ],
+  "ex10": [
+    "The name is inside `customer`, the rest is inside `address`.",
+    "Chain the dots: first the outer object, then the inner property."
+  ],
+  "ex11": [
+    "Put ?. at the point where something might be missing: the address.",
+    "?. gives undefined when the address is missing. What operator turns undefined into a fallback?"
+  ],
+  "ex12": [
+    "Go through the products one by one and compare each product's name with `name`.",
+    "Return as soon as you find a match. If the loop ends without a match, return null."
+  ],
+  "ex13": [
+    "Start a total at 0 and go through the items one by one.",
+    "Each item adds its price multiplied by its quantity."
+  ],
+  "ex14": [
+    "Start with an empty object and go through the word one letter at a time.",
+    "The first time a letter shows up, it has no counter yet. Handle that case before adding 1.",
+    "The ?? operator can turn a missing counter into 0."
+  ],
+  "ex15": [
+    "Methods are written inside the object, like properties, separated by commas.",
+    "Inside a method, `this` is the player. Use it to read and change the score.",
+    "addPoints needs to change the score first, and then return it."
+  ],
+  "ex16": [
+    "One line with const and curly braces can create name, age and city at once.",
+    "Inside the destructuring, `= value` after a name sets its default when the property is missing."
+  ],
+  "ex17": [
+    "Create a new object with { } and spread both objects inside it.",
+    "The order matters: the object written last wins when keys repeat."
+  ],
+  "ex18": [
+    "`product` points to the caller's object. Changing its price changes their product too.",
+    "Create a copy with the spread operator and change the price on the copy instead.",
+    "You can copy and replace the price in the same object literal: the property written last wins."
+  ],
+  "ex19": [
+    "Split the problem in two: first count every word, then find the biggest counter.",
+    "Make the text lowercase before splitting it into words.",
+    "For ties, only replace the current winner when a word has strictly more, and check the words in the order they appeared."
+  ],
+  "ex20": [
+    "Start with the report object already shaped, with zeros and empty containers, then fill it in one loop.",
+    "For each product, update every part of the report: the stock, the value, its category counter and maybe the out-of-stock list.",
+    "Counting categories works like counting letters: a counter per key, created the first time."
+  ]
+}

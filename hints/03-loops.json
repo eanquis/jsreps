@@ -1,0 +1,95 @@
+{
+  "ex01": [
+    "Write down the values the counter takes, one per round, and count them.",
+    "< stops before the limit, <= includes it. Counting by 2 skips numbers.",
+    "If the condition is false from the start, the body never runs. For the while loop, subtract 3 until the condition fails."
+  ],
+  "ex02": [
+    "You need two variables before the loop: a counter that goes from 1 to n, and a total that starts at 0.",
+    "Each round, add the counter to the total, then move the counter forward.",
+    "Don't forget to increase the counter inside the loop, or it never ends."
+  ],
+  "ex03": [
+    "Like a sum, but multiplying. What should the result start at, so that multiplying doesn't ruin it?",
+    "Start the result at 1 and multiply it by each number from 1 (or 2) up to n.",
+    "When n is 0, the loop shouldn't run at all, and the starting value is already the answer."
+  ],
+  "ex04": [
+    "Start the counter at n and decrease it until it reaches 1.",
+    "Start with an empty string and add each number followed by \"... \".",
+    "\"Liftoff!\" is added only once, after the loop ends."
+  ],
+  "ex05": [
+    "The loop should run `exponent` times.",
+    "Each round, multiply the result by the base. What should the result start at?"
+  ],
+  "ex06": [
+    "Go through every number from 1 to n, and keep a counter that starts at 0.",
+    "Inside the loop, use an `if` with % to decide whether to count the number."
+  ],
+  "ex07": [
+    "Try sumRange(1, 5) by hand, following the loop. Which number is missing?",
+    "The loop stops one number too early. Look at the condition."
+  ],
+  "ex08": [
+    "A loop ends only when its condition becomes false. Does anything inside the loop change `n`?",
+    "`n / 2` calculates a value, but the result isn't stored anywhere.",
+    "Assign the result back to `n`."
+  ],
+  "ex09": [
+    "Start at `start` and check one number at a time, going up.",
+    "As soon as a number is divisible by `divisor`, stop the loop with break.",
+    "The number must still exist after the loop: declare the variable that holds it outside the loop."
+  ],
+  "ex10": [
+    "Go through every number from 1 to n, adding them to a total.",
+    "Before adding, check whether the number is divisible by `skip`. If it is, skip this round with continue."
+  ],
+  "ex11": [
+    "Follow each loop by hand, writing down the value after every round.",
+    "break ends the whole loop. continue only skips the rest of the current round.",
+    "Adding a number to a string joins it as text. And a while loop can go past its limit before the condition is checked again."
+  ],
+  "ex12": [
+    "Build the result with += inside a loop that runs `times` times.",
+    "The tricky part is the space: it goes between repetitions, not after the last one.",
+    "Add the space only when the result already has something in it, or only before every repetition except the first."
+  ],
+  "ex13": [
+    "Each round, take the last digit with % 10, add it to the total, then remove it with Math.floor(n / 10).",
+    "Keep going while there are digits left: when does the number become 0?"
+  ],
+  "ex14": [
+    "Each round, remove one digit and count it.",
+    "The number 0 still has one digit. That's why do...while fits: it counts at least once.",
+    "Remove the last digit with Math.floor(n / 10), and keep going while the number is greater than 0."
+  ],
+  "ex15": [
+    "The outer loop goes through the lines, the inner loop adds the stars of one line.",
+    "After each line, add \"\\n\", except after the last one.",
+    "Check whether the current line is the last one before adding the line break."
+  ],
+  "ex16": [
+    "It's like the rectangle, but the number of stars changes on every line.",
+    "Line 1 has 1 star, line 2 has 2 stars... The inner loop's limit can be the outer loop's counter."
+  ],
+  "ex17": [
+    "Read the error message: which variable doesn't exist?",
+    "A variable declared inside the loop only exists inside it, and it starts over every round.",
+    "Move the declaration of the accumulator to before the loop."
+  ],
+  "ex18": [
+    "The outer loop goes through the lines, the inner loop goes through the columns.",
+    "The value of each cell is the line number times the column number.",
+    "Add a space after each value except the last of the line, and \"\\n\" after each line except the last."
+  ],
+  "ex19": [
+    "Try dividing n by every number between 2 and n - 1. If any divides it evenly, it's not prime.",
+    "As soon as you find a divisor, you can return false. If the loop finishes without finding one, it's prime.",
+    "Don't forget the numbers below 2. They are never prime."
+  ],
+  "ex20": [
+    "Repeat while n is not 1, counting each step.",
+    "Inside the loop, use % to decide whether n is even or odd, and update n accordingly."
+  ]
+}

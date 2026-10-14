@@ -1,0 +1,92 @@
+{
+  "ex01": [
+    "map always returns an array with the same length as the original.",
+    "filter returns only the items for which the callback is true. It may return fewer items, or none at all.",
+    "Look at what each callback returns: a comparison returns a boolean, and + on strings joins them."
+  ],
+  "ex02": [
+    "The callback runs once per number. What should it do with `total` each time?",
+    "The callback can change a variable declared outside of it, as long as it was declared with let."
+  ],
+  "ex03": [
+    "The callback receives one number and returns what that number should become.",
+    "map already returns a new array, so you can return its result directly."
+  ],
+  "ex04": [
+    "The callback should return true for the numbers you want to keep.",
+    "Remember the remainder operator from the conditionals module."
+  ],
+  "ex05": [
+    "Strings have a length property.",
+    "The callback can use `minLength` directly, because it's a parameter of the function around it.",
+    "'At least' includes words with exactly minLength characters."
+  ],
+  "ex06": [
+    "The callback receives one user at a time. Compare one of its properties with `name`.",
+    "When nothing matches, find already returns undefined. You don't need to handle it yourself."
+  ],
+  "ex07": [
+    "The callback should be true for negative numbers.",
+    "findIndex already returns -1 when nothing matches."
+  ],
+  "ex08": [
+    "Each function is a single line: call the right method with a condition.",
+    "some answers 'is there at least one?'. every answers 'are they all?'."
+  ],
+  "ex09": [
+    "includes receives the value itself, not a function.",
+    "The items are objects, so includes can't compare them with a number. Use a callback that looks at the price."
+  ],
+  "ex10": [
+    "The callback receives the sum so far and the current price, and returns the new sum.",
+    "reduce's second argument is the starting value. What should the sum start at?",
+    "Without a starting value, reduce throws an error on an empty array."
+  ],
+  "ex11": [
+    "The accumulated value is the largest number seen so far.",
+    "In each step, compare the current number with the largest so far and return whichever is bigger.",
+    "Since the list is never empty, reduce can start from the first number if you don't give it a starting value."
+  ],
+  "ex12": [
+    "Start with an empty object. For each word, add 1 to its count.",
+    "The first time a word appears, its key doesn't exist yet: its value is undefined.",
+    "Don't forget to return the object at the end of the callback."
+  ],
+  "ex13": [
+    "Without a comparator, sort converts every item to a string before comparing.",
+    "Give sort a function that receives two numbers and tells which one comes first.",
+    "Subtracting the numbers gives a negative result when the first one is smaller."
+  ],
+  "ex14": [
+    "sort rearranges the array you call it on. Which array is that here?",
+    "Sort a copy instead: either copy the array first or use toSorted."
+  ],
+  "ex15": [
+    "The comparator receives two people. Compare their ages.",
+    "toSorted returns a sorted copy and leaves the original alone.",
+    "A comparator that returns 0 keeps both people in their original order."
+  ],
+  "ex16": [
+    "The callback has braces. What does a function with braces return when it has no return statement?",
+    "Either add `return`, or remove the braces so the expression is returned automatically."
+  ],
+  "ex17": [
+    "After an arrow, `{` starts a block of code, not an object.",
+    "Wrap the object in parentheses so JavaScript knows it's a value to return."
+  ],
+  "ex18": [
+    "First, think about how to get the list of tags of a single post.",
+    "map would give you an array of arrays. flat joins them into one.",
+    "flatMap does both steps at once."
+  ],
+  "ex19": [
+    "Start with an empty object. For each word, find its first letter and add the word to that letter's list.",
+    "The first time a letter appears, its list doesn't exist yet: create an empty one first.",
+    "Arrays inside the object can use push like any other array."
+  ],
+  "ex20": [
+    "Break it into steps: compute each average, keep the good ones, sort them, then keep only the names.",
+    "A small helper function that calculates the average of a list of grades makes the chain easier to read.",
+    "To keep the original array untouched, sort a new array: the result of map or filter, or a toSorted copy."
+  ]
+}

@@ -8,6 +8,7 @@ const HELP = `
 Usage: npm run <command>
 
   verify            Check your exercises and show your progress (default)
+  verify -- --all   Check every module, not only up to the current one
   watch             Run verify again every time you save an exercise
   hint [level]      Show a hint for the exercise you're working on
   hint <id> [level] Show a hint for a specific exercise, e.g. 01-variables/ex04
@@ -46,7 +47,7 @@ export async function main(
 
 async function verify({ root, write, runTests }, args) {
   const exercises = await listExercises(root);
-  const results = await runTests(exercises.map((exercise) => exercise.testFile));
+  const results = await check(exercises, runTests, args.includes('--all'));
   write(formatVerify(exercises, results));
   // In watch mode a failing exercise is expected, not an error worth reporting.
   const watching = args.includes('--watch');
@@ -67,7 +68,7 @@ async function hint({ root, write, runTests }, args) {
       return 1;
     }
   } else {
-    const results = await runTests(exercises.map((candidate) => candidate.testFile));
+    const results = await check(exercises, runTests, false);
     exercise = findCurrent(exercises, results);
     level = first;
     if (!exercise) {
@@ -79,4 +80,19 @@ async function hint({ root, write, runTests }, args) {
   const hints = await loadHints(root, exercise);
   write(formatHint(exercise, hints, Number(level ?? 1)));
   return 0;
+}
+
+/**
+ * Runs the tests module by module. Unless `all` is set, it stops after the
+ * first module with a failing exercise: checking later modules would only
+ * make every save slower.
+ */
+async function check(exercises, runTests, all) {
+  const results = new Map();
+  for (const items of Map.groupBy(exercises, (exercise) => exercise.module).values()) {
+    const moduleResults = await runTests(items.map((exercise) => exercise.testFile));
+    for (const [file, result] of moduleResults) results.set(file, result);
+    if (!all && findCurrent(items, moduleResults)) break;
+  }
+  return results;
 }

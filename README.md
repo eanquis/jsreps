@@ -2,16 +2,24 @@
 
 Learn programming fundamentals in JavaScript by practicing, again and again.
 
-Each module teaches one concept with a short lesson and around 20 small
-exercises. Every exercise has automated tests, so you know right away whether
-your code works.
+Ten modules, from variables to small projects. Each one has a short lesson
+and 20 small exercises, 200 in total. Every exercise has automated tests, so
+you know right away whether your code works.
 
 ## Modules
 
-| #   | Module                                     | Exercises |
-| --- | ------------------------------------------ | --------- |
-| 01  | [Variables](lessons/01-variables.md)       | 20        |
-| 02  | [Conditionals](lessons/02-conditionals.md) | 20        |
+| #   | Module                                       | Exercises |
+| --- | -------------------------------------------- | --------- |
+| 01  | [Variables](lessons/01-variables.md)         | 20        |
+| 02  | [Conditionals](lessons/02-conditionals.md)   | 20        |
+| 03  | [Loops](lessons/03-loops.md)                 | 20        |
+| 04  | [Strings](lessons/04-strings.md)             | 20        |
+| 05  | [Arrays](lessons/05-arrays.md)               | 20        |
+| 06  | [Functions](lessons/06-functions.md)         | 20        |
+| 07  | [Objects](lessons/07-objects.md)             | 20        |
+| 08  | [Array methods](lessons/08-array-methods.md) | 20        |
+| 09  | [Errors](lessons/09-errors.md)               | 20        |
+| 10  | [Projects](lessons/10-projects.md)           | 20        |
 
 ## Getting started
 
@@ -54,7 +62,8 @@ Progress ███░░░░░░░░░░░░░░░░░ 3/20
 
 | Command                            | What it does                                     |
 | ---------------------------------- | ------------------------------------------------ |
-| `npm run verify`                   | Checks every exercise and shows your progress    |
+| `npm run verify`                   | Checks your exercises and shows your progress    |
+| `npm run verify -- --all`          | Also checks the modules after the current one    |
 | `npm run watch`                    | Same as verify, again every time you save        |
 | `npm run hint`                     | Shows a hint for the exercise you're working on  |
 | `npm run hint -- 2`                | Shows the next hint                              |

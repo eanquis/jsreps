@@ -4,15 +4,20 @@ import { styleText } from 'node:util';
 const BAR_WIDTH = 20;
 
 /**
- * The exercise to work on next: the first one whose tests don't pass.
+ * The exercise to work on next: the first one whose tests ran and failed.
  */
 export function findCurrent(exercises, results) {
-  return exercises.find((exercise) => !results.get(exercise.testFile).passed);
+  return exercises.find((exercise) => results.get(exercise.testFile)?.passed === false);
 }
 
+/**
+ * Formats the progress report. Exercises missing from `results` were not
+ * checked: their whole module is shown as pending.
+ */
 export function formatVerify(exercises, results) {
   const current = findCurrent(exercises, results);
-  const passed = (exercise) => results.get(exercise.testFile).passed;
+  const passed = (exercise) => results.get(exercise.testFile)?.passed === true;
+  const checked = (exercise) => results.has(exercise.testFile);
   const lines = [''];
 
   for (const [moduleName, items] of Map.groupBy(exercises, (exercise) => exercise.module)) {
@@ -22,6 +27,8 @@ export function formatVerify(exercises, results) {
       for (const item of items) {
         lines.push(`  ${icon(item, passed(item), current)} ${item.name}  ${item.title}`);
       }
+    } else if (!items.some(checked)) {
+      lines.push(styleText('dim', `○ ${moduleName}`));
     } else {
       const moduleIcon = done === items.length ? styleText('green', '✔') : styleText('dim', '○');
       lines.push(`${moduleIcon} ${moduleName}  ${done}/${items.length}`);
@@ -29,6 +36,14 @@ export function formatVerify(exercises, results) {
   }
 
   lines.push('', progressBar(exercises.filter(passed).length, exercises.length), '');
+
+  if (!exercises.every(checked)) {
+    lines.push(
+      styleText('dim', 'Later modules are checked once you finish this one.'),
+      styleText('dim', 'To check everything now, run npm run verify -- --all'),
+      '',
+    );
+  }
 
   if (!current) {
     lines.push(styleText('green', 'All exercises done! Great work. 🎉'), '');

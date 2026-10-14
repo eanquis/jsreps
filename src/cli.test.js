@@ -38,6 +38,26 @@ test('verify exits with 0 when every exercise passes', async () => {
   assert.match(output, /All exercises done!/);
 });
 
+test('verify stops checking after the first module with a failing exercise', async () => {
+  const { output } = await cli(['verify']);
+  assert.match(output, /^○ 02-more$/m);
+  assert.match(output, /Later modules are checked once you finish this one\./);
+  assert.match(output, /Progress .* 0\/4/);
+});
+
+test('verify checks the next module once the current one is done', async () => {
+  const { output } = await cli(['verify'], ['01-basics/ex01', '01-basics/ex02']);
+  assert.match(output, /✔ 01-basics  2\/2/);
+  assert.match(output, /✖ 02-more\/ex01/);
+  assert.doesNotMatch(output, /Later modules/);
+});
+
+test('verify --all checks every module', async () => {
+  const { output } = await cli(['verify', '--all']);
+  assert.match(output, /○ 02-more  0\/2/);
+  assert.doesNotMatch(output, /Later modules/);
+});
+
 test('verify --watch does not fail while exercises are pending', async () => {
   const { exitCode, output } = await cli(['verify', '--watch']);
   assert.equal(exitCode, 0);

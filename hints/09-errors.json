@@ -1,0 +1,99 @@
+{
+  "ex01": [
+    "ReferenceError: a name that doesn't exist. TypeError: an operation on the wrong kind of value. RangeError: a number outside the allowed range. SyntaxError: code JavaScript can't even read.",
+    "Reassigning a const is an operation that isn't allowed on that variable.",
+    "A variable name can't start with a digit, so JavaScript can't parse that line at all."
+  ],
+  "ex02": [
+    "Check for the problem before doing the subtraction.",
+    "Withdrawing exactly the whole balance is fine. Only more than the balance is a problem.",
+    "After a throw, the function stops: no need for an else."
+  ],
+  "ex03": [
+    "typeof tells you whether a value is a number.",
+    "Throw when the type is NOT 'number'. Strings with digits, like '3', are not numbers.",
+    "Use the TypeError constructor, not the plain Error one."
+  ],
+  "ex04": [
+    "There are two ways to be out of range: too low or too high. One condition with || can catch both.",
+    "0 and 10 are both valid volumes.",
+    "Return the label with a template literal after the check."
+  ],
+  "ex05": [
+    "Write one `if` per rule, in the order listed, each one throwing right away.",
+    "Once all the checks have passed, the last line can calculate and return the price.",
+    "A 20% discount on 100 removes 20: the price times the percent, divided by 100."
+  ],
+  "ex06": [
+    "Put the risky call, JSON.parse, inside the try block and return its result from there.",
+    "The catch block runs only when JSON.parse throws. What should the function return in that case?"
+  ],
+  "ex07": [
+    "Call fn inside a try block.",
+    "In the catch block, the error object has a property with its text.",
+    "If the try block finishes without errors, the function continues after the try/catch."
+  ],
+  "ex08": [
+    "Like the previous exercise, but now you need two properties of the error.",
+    "Join the name and the message with a colon and a space."
+  ],
+  "ex09": [
+    "Wrap the call to action in a try block, with a finally block after it. You don't need catch.",
+    "A return inside try still runs the finally block before the function ends.",
+    "Unlocking belongs in finally, so it happens whether the action works or throws."
+  ],
+  "ex10": [
+    "Number('') is 0, so check for empty text yourself before trusting the conversion. trim() removes the spaces.",
+    "Number.isNaN tells you whether the conversion failed.",
+    "Check the type problems first, then the negative numbers."
+  ],
+  "ex11": [
+    "The return inside try only happens when divide doesn't throw.",
+    "In catch, build the failure object using the error's message.",
+    "Both results are objects with an `ok` property. Only the property next to it changes."
+  ],
+  "ex12": [
+    "Inside the catch, check what kind of error you got before deciding what to do.",
+    "Invalid JSON produces a SyntaxError. instanceof can check that.",
+    "Once other errors are thrown again, run the tests: the error that shows up points to the hidden bug."
+  ],
+  "ex13": [
+    "A string can be thrown, but it isn't an Error object.",
+    "Create an Error with the same message and throw that instead."
+  ],
+  "ex14": [
+    "Follow the NotFoundError example in the comment, changing the names.",
+    "The class needs `export` before it so the tests can see it.",
+    "Strings have a method that tells you whether they contain another string."
+  ],
+  "ex15": [
+    "Call fn inside try. If it doesn't throw, return 'ok' right after it.",
+    "In catch, use instanceof to check whether the error is a ValidationError.",
+    "For any other error, throw the same error object again."
+  ],
+  "ex16": [
+    "Write one guard clause per rule, in the order listed.",
+    "A name made only of spaces is empty after trim().",
+    "Number.isInteger returns false for strings, decimals and undefined, which covers every bad age."
+  ],
+  "ex17": [
+    "After a throw, the rest of the try block is skipped and the catch block runs.",
+    "finally runs in both cases: with or without an error.",
+    "After the catch handles the error, the code after the try/catch keeps running normally."
+  ],
+  "ex18": [
+    "Use a loop that runs `times` times, with a try/catch inside it.",
+    "Returning from inside the try ends the loop and the function as soon as a call works.",
+    "Keep the last error in a variable declared before the loop, and throw it after the loop."
+  ],
+  "ex19": [
+    "Start with an empty array and push a message for each problem you find. Don't return early.",
+    "A missing or empty username is falsy. The length check only makes sense when there is a username.",
+    "To find a digit, go through the characters of the password and check whether one of them is in '0123456789'."
+  ],
+  "ex20": [
+    "Split the text on ';', trim each entry, and skip the empty ones.",
+    "Find the position of the first '='. The key is everything before it and the value everything after it.",
+    "Before adding a key, check whether it is already in the object. Module 07 showed two ways to do that."
+  ]
+}

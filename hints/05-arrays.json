@@ -1,0 +1,98 @@
+{
+  "ex01": [
+    "Arrays are written between square brackets, with the items separated by commas.",
+    "Each fruit is a string, so it needs quotes.",
+    "An empty array is just the two brackets with nothing between them."
+  ],
+  "ex02": [
+    "Indexes start at 0, not 1.",
+    "If a list has 5 items, what is the index of the last one? Use `length` to write it for any size."
+  ],
+  "ex03": [
+    "Count the items to get the length.",
+    "Indexes start at 0: index 1 is the second item.",
+    "Reading an index where there is no item doesn't crash. It gives a special 'no value' value."
+  ],
+  "ex04": [
+    "Each step is one method call on `playlist`. Check the lesson's table to pick the right method for each end.",
+    "pop() and shift() return the item they removed. Assign that result to the matching variable.",
+    "Don't declare `lastRemoved` or `firstRemoved` again: they already exist, just assign to them."
+  ],
+  "ex05": [
+    "First find out whether the name is in the list, and where.",
+    "indexOf gives -1 when the item isn't there, so it can answer both questions at once.",
+    "Indexes start at 0, but guest numbers start at 1."
+  ],
+  "ex06": [
+    "Start with a variable at 0 before the loop.",
+    "Inside the loop, add the current item to that variable.",
+    "Return the variable after the loop ends, not inside it."
+  ],
+  "ex07": [
+    "Start a counter at 0 before the loop.",
+    "Inside the loop, compare each item with the target using ===.",
+    "Only increase the counter when they are equal."
+  ],
+  "ex08": [
+    "Start with the first number as the biggest you've seen so far. Starting at 0 fails when every number is negative.",
+    "Visit every number and replace your 'biggest so far' when you find a bigger one."
+  ],
+  "ex09": [
+    "Handle the special cases first: not an array, or an empty array.",
+    "An average is the sum divided by how many numbers there are.",
+    "Dividing by the length of an empty list gives NaN. That's why you return early."
+  ],
+  "ex10": [
+    "Start with an empty array that will hold the result.",
+    "A number is even when the remainder of dividing it by 2 is 0.",
+    "push each even number into the result array, then return it."
+  ],
+  "ex11": [
+    "`const result = scores` doesn't copy anything: both names point to the same array.",
+    "Make `result` a new array with the same items. The lesson shows two ways to copy an array."
+  ],
+  "ex12": [
+    "Start with an empty array for the result.",
+    "A for loop can count down: start at the last index and stop after index 0.",
+    "Another way: visit the items in order and add each one to the start of the result."
+  ],
+  "ex13": [
+    "Page 1 starts at index 0. Where does page 2 start, if each page has pageSize items?",
+    "The start of a page is (pageNumber - 1) times pageSize. The end is the start plus pageSize.",
+    "slice doesn't mind if the end goes past the length of the array."
+  ],
+  "ex14": [
+    "Three steps: make it lowercase, break it into words, glue the words back together.",
+    "split(' ') breaks on spaces. join('-') glues with dashes.",
+    "String methods can be chained, one after the other."
+  ],
+  "ex15": [
+    "Create a new array with square brackets, and spread both arrays inside it.",
+    "The order inside the brackets is the order of the result."
+  ],
+  "ex16": [
+    "One way: copy the array, then remove the item from the copy with splice.",
+    "Another way: take the part before the index and the part after it with slice, and merge them.",
+    "splice changes the array it's called on, so never call it on the original."
+  ],
+  "ex17": [
+    "`sameArray = original` doesn't create a new array. How many arrays exist in this code?",
+    "push(4) is called through `sameArray`, but which array receives it?",
+    "=== on arrays checks whether both sides are the very same array, not whether they look alike."
+  ],
+  "ex18": [
+    "The outer loop visits each row. Each row is itself an array.",
+    "The inner loop visits each number of the current row.",
+    "Keep a single total, declared before both loops."
+  ],
+  "ex19": [
+    "Build the result one item at a time, starting with an empty array.",
+    "Before adding an item to the result, check whether the result already has it.",
+    "includes and indexOf both work to check the result."
+  ],
+  "ex20": [
+    "There are 8 ways to win: 3 rows, 3 columns and 2 diagonals.",
+    "A line is a win when its three cells are equal AND not empty.",
+    "A loop from 0 to 2 can check row i and column i at the same time. Then check the two diagonals separately."
+  ]
+}
