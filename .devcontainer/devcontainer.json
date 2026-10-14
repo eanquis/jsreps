@@ -1,0 +1,10 @@
+{
+  "name": "jsreps",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:24",
+  "postAttachCommand": "npm run verify",
+  "customizations": {
+    "codespaces": {
+      "openFiles": ["lessons/01-variables.md", "exercises/01-variables/ex01.js"]
+    }
+  }
+}

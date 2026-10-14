@@ -1,0 +1,22 @@
+{
+  "name": "jsreps",
+  "version": "0.1.0",
+  "description": "Learn programming fundamentals in JavaScript through repetition.",
+  "type": "module",
+  "private": true,
+  "license": "MIT",
+  "engines": {
+    "node": ">=24"
+  },
+  "bin": {
+    "jsreps": "./bin/jsreps.js"
+  },
+  "scripts": {
+    "verify": "node bin/jsreps.js verify",
+    "watch": "node --watch-path=exercises bin/jsreps.js verify --watch",
+    "hint": "node bin/jsreps.js hint",
+    "test": "node --test --experimental-test-coverage --test-coverage-include=\"src/**\" --test-coverage-include=\"bin/**\" --test-coverage-exclude=\"**/*.test.js\" --test-coverage-exclude=\"src/__fixtures__/**\" --test-coverage-lines=100 --test-coverage-branches=100 --test-coverage-functions=100 \"src/*.test.js\" \"bin/*.test.js\"",
+    "test:solutions": "node scripts/test-solutions.js",
+    "test:templates": "node scripts/check-templates.js"
+  }
+}

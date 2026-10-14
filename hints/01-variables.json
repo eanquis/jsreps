@@ -1,0 +1,89 @@
+{
+  "ex01": [
+    "Text values are called strings, and they must be wrapped in quotes.",
+    "Compare your text with the task letter by letter: capitalization, the comma and the exclamation mark all count."
+  ],
+  "ex02": [
+    "How many days does a week have?",
+    "If you wrapped the value in quotes, it became a string. Numbers don't use quotes."
+  ],
+  "ex03": [
+    "A boolean has only two possible values. Which one means 'yes' and which one means 'no'?",
+    "Booleans are not strings: they don't go between quotes."
+  ],
+  "ex04": [
+    "Read the error message: it tells you which kind of variable can't be reassigned.",
+    "JavaScript has two keywords to declare variables. One of them allows reassignment.",
+    "Only the first word of the declaration needs to change."
+  ],
+  "ex05": [
+    "Start by declaring the variable. Remember the `export` keyword before the declaration.",
+    "To add 1, the new value of the variable is its current value plus one.",
+    "The tests count how many times you wrote the full reassignment. Don't use shortcuts like += or ++ here."
+  ],
+  "ex06": [
+    "Each step is one line, starting with the variable name followed by the shortcut operator.",
+    "Doubling something is the same as multiplying it by 2."
+  ],
+  "ex07": [
+    "These operators go right after the variable name, and they don't need a number.",
+    "Increasing `level` twice means writing the increment on two separate lines."
+  ],
+  "ex08": [
+    "How do you get the cost of several items when you know the price of one?",
+    "Use the variable names in the calculation, not their values."
+  ],
+  "ex09": [
+    "Template literals use backticks (`), not single or double quotes.",
+    "Inside backticks, a variable goes inside a dollar sign followed by curly braces.",
+    "Don't forget the space between the two names."
+  ],
+  "ex10": [
+    "You need to join three pieces: the city, a separator, and the country.",
+    "The separator is a string too: a comma followed by a space."
+  ],
+  "ex11": [
+    "The possible answers include 'number', 'string', 'boolean' and 'undefined'.",
+    "Quotes turn anything into a string, even digits."
+  ],
+  "ex12": [
+    "A declaration doesn't need an `=`. Without one, the variable starts as undefined.",
+    "To say a value is intentionally empty, there is a special keyword. It is not a string."
+  ],
+  "ex13": [
+    "The export line already tells you which names to use.",
+    "Fix one line at a time and read the new error each time you run verify."
+  ],
+  "ex14": [
+    "If you assign `right` to `left` first, the original value of `left` is lost. How could you keep it?",
+    "A third, temporary variable can hold one value while you move the other.",
+    "Think of swapping the contents of two glasses: you need a third glass."
+  ],
+  "ex15": [
+    "The `let message` inside the block creates a new variable that only exists in there.",
+    "When the block ends, which `message` is still around?"
+  ],
+  "ex16": [
+    "A variable only exists in the block where it was declared. Where must `feeling` be declared to be visible at the export?",
+    "Declare it once, before the `if`. Inside the `if`, only change its value: declaring again would create a different variable."
+  ],
+  "ex17": [
+    "When + sees a string on either side, it joins text instead of adding numbers.",
+    "The operators - and * only work with numbers, so JavaScript converts strings to numbers first.",
+    "Check the type of each answer: a string needs quotes, a number doesn't."
+  ],
+  "ex18": [
+    "Pass the variable `input` to Number() to get a number.",
+    "Calculate `ageNextYear` from `age`, not from `input`."
+  ],
+  "ex19": [
+    "How many seconds are in a minute? How many minutes in an hour?",
+    "An hour's seconds are the seconds per minute times the minutes per hour.",
+    "Remember to `export` only the two variables the task asks for."
+  ],
+  "ex20": [
+    "Break the problem into steps, one variable per step, in the order listed in the task.",
+    "The cost of each product is its price times how many were bought. The subtotal adds both.",
+    "For the receipt, a template literal makes it easier. A dollar sign followed by ${...} works: the first $ is just text."
+  ]
+}
