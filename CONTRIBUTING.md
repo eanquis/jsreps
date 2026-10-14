@@ -19,11 +19,15 @@ There are no dependencies. Everything runs on Node.js 24.
 
 ## Rules for exercises
 
-- Every exercise has a reference solution in `solutions/`, with the same path.
+- Every exercise has a reference solution in `solutions/`, with the same path
+  and the same header comment.
 - Hints explain the idea, never the code. The code is what `solutions/` is for.
 - Every exercise starts with a header comment:
   `Exercise NN · Title`, a short explanation and the task.
 - Exercises must **fail** before the student edits them.
+- From module 02 on, exercises are functions, and tests check them with
+  `assertCalls()` from `tests/helpers.js`. Cover every branch: the solutions
+  must reach 100% coverage.
 - Tests use fixed values. When a test needs to check *how* something was done
   (e.g. "use `let`"), it reads the code with `code()` from `tests/helpers.js`.
 - Write assertion messages for beginners: say what to do, not just what failed.

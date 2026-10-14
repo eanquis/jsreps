@@ -8,9 +8,10 @@ your code works.
 
 ## Modules
 
-| #   | Module                                  | Exercises |
-| --- | --------------------------------------- | --------- |
-| 01  | [Variables](lessons/01-variables.md)    | 20        |
+| #   | Module                                     | Exercises |
+| --- | ------------------------------------------ | --------- |
+| 01  | [Variables](lessons/01-variables.md)       | 20        |
+| 02  | [Conditionals](lessons/02-conditionals.md) | 20        |
 
 ## Getting started
 

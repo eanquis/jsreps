@@ -1,0 +1,90 @@
+{
+  "ex01": [
+    "=== compares both the value and the type. Is a number the same as a string?",
+    ">= means 'greater than OR equal to'. < means 'strictly less than'.",
+    "On the number line, -1 is to the right of -5."
+  ],
+  "ex02": [
+    "The function already has a default message. You only need to change it in one situation.",
+    "Inside the `if`, assign the new message to the existing `message` variable. Don't declare it again."
+  ],
+  "ex03": [
+    "Compare the parameter with the expected password using ===.",
+    "Each branch needs its own `return`.",
+    "The comparison is exact: uppercase letters and extra spaces make a different string."
+  ],
+  "ex04": [
+    "Conditions are checked from top to bottom, and only the first true one runs.",
+    "If the first condition handles everything below 10, the second one only needs to check the upper limit.",
+    "Pay attention to the limits: 10 is mild and 25 is hot."
+  ],
+  "ex05": [
+    "An even number has no remainder when divided by 2.",
+    "Compare the result of the remainder operation with 0."
+  ],
+  "ex06": [
+    "Look closely at the condition inside the `if`. Is it comparing or assigning?",
+    "One equals sign assigns a value. Comparing needs three."
+  ],
+  "ex07": [
+    "Two things must be true at the same time: the age and the license.",
+    "A comparison already produces true or false, so you can return the combined condition directly."
+  ],
+  "ex08": [
+    "Compare `day` with each weekend day separately, then combine the two comparisons.",
+    "Each side of || must be a complete comparison."
+  ],
+  "ex09": [
+    "You need an umbrella when two things are true: it's raining, and you are not indoors.",
+    "Put ! right before the variable you want to flip."
+  ],
+  "ex10": [
+    "JavaScript evaluates `0 <= n` first. What type of value does that produce? What happens when it's compared with 100?",
+    "Write two separate comparisons, one for each end of the range, and require both to be true."
+  ],
+  "ex11": [
+    "There are only six falsy values: false, 0, '', null, undefined and NaN.",
+    "Any non-empty string is truthy, whatever it says, even 'false' or a single space."
+  ],
+  "ex12": [
+    "Empty strings, undefined and null are all falsy. One condition can catch all of them.",
+    "Use the parameter itself as the condition of the `if`."
+  ],
+  "ex13": [
+    "The ternary has three parts: the condition, the value when true, and the value when false.",
+    "A template literal is handy for the plural case.",
+    "You can return the result of the ternary directly."
+  ],
+  "ex14": [
+    "When is the number already positive? When does it need to change?",
+    "Putting - before a variable flips its sign: -n."
+  ],
+  "ex15": [
+    "Write one `case` per day. Days that return the same thing can be stacked one after the other.",
+    "When you `return` inside a case, you don't need `break`.",
+    "The `default` case handles anything that didn't match."
+  ],
+  "ex16": [
+    "Follow the code for 'green' line by line. Where does it stop?",
+    "Without `break`, a case keeps running into the next ones."
+  ],
+  "ex17": [
+    "A 70-year-old student matches two rules. Which one should win?",
+    "Put the conditions in the order of priority: the first match decides the price.",
+    "Using `return` inside each `if` stops the function as soon as a rule matches."
+  ],
+  "ex18": [
+    "Use < to compare the two words, just like numbers.",
+    "When the words are equal, returning either one is fine."
+  ],
+  "ex19": [
+    "Check the most specific rule first: divisible by 400.",
+    "'Divisible by' means the remainder is 0.",
+    "After handling 400 and 100, the remaining years only need the rule of 4."
+  ],
+  "ex20": [
+    "Which check must come first? Think about 15: it's divisible by 3, by 5, and by both.",
+    "A number divisible by both 3 and 5 is divisible by 15.",
+    "To turn a number into a string, use String(n) or a template literal."
+  ]
+}

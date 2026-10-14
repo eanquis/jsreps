@@ -1,7 +1,9 @@
+import assert from 'node:assert/strict';
 import { spawnSync } from 'node:child_process';
 import { readFile } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
+import { inspect } from 'node:util';
 
 const root = fileURLToPath(new URL('..', import.meta.url));
 // Maintainers point this at the reference solutions to validate the tests.
@@ -40,6 +42,22 @@ export function exercise(id) {
       return source;
     },
   };
+}
+
+/**
+ * Calls a function with each list of arguments and checks what it returns.
+ *
+ *   assertCalls(double, [
+ *     [[2], 4],
+ *     [[-1], -2],
+ *   ]);
+ */
+export function assertCalls(fn, cases) {
+  assert.equal(typeof fn, 'function', 'This should be a function. Did you rename or delete it?');
+  for (const [args, expected] of cases) {
+    const call = `${fn.name}(${args.map((arg) => inspect(arg)).join(', ')})`;
+    assert.equal(fn(...args), expected, `${call} should return ${inspect(expected)}.`);
+  }
 }
 
 async function importExercise(file) {
